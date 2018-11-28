@@ -1,20 +1,19 @@
 %% it's a sample file!
-%% please use corressponding template 
+%% please use corressponding template
 
 \documentclass[joc]{ipart}
 
-\RequirePackage[OT1]{fontenc}
 \RequirePackage{amsthm,amsmath}
 \RequirePackage[numbers,square]{natbib}
-\RequirePackage[colorlinks]{hyperref}
+\RequirePackage{hyperref}
 
 % settings
-\pubyear{0000}
+\pubyear{2018}
 \volume{0}
 \issue{0}
 \firstpage{1}
-\lastpage{8}
-\arxiv{http://arxiv.org/abs/0000.0000}
+\lastpage{4}
+\arxiv{math/0000.0000}
 
 \startlocaldefs
 %\numberwithin{equation}{section}
@@ -26,37 +25,29 @@
 
 \begin{frontmatter}
 \title{A sample document\protect\thanksref{T1}}
-\runtitle{A sample document}
 \thankstext{T1}{Footnote to the title with the `thankstext' command.}
 
 \begin{aug}
-\author{\fnms{First}
-\snm{Author}\thanksref{t1,t2}\ead[label=e1]{first@somewhere.com}},
-\address{Address of the First author\\
-usually few lines long\\
-\printead{e1}}
-\author{\fnms{Second} \snm{Author}\thanksref{t3}\ead[label=e2]{second@somewhere.com}}
-\address{Address of the Second author\\
-usually few lines long\\
-\printead{e2}}
-\and
-\author{\fnms{Third} \snm{Author}
-\ead[label=e3]{third@somewhere.com}
-\ead[label=u1,url]{www.foo.com}}
-
-\address{Address of the Third author\\
-usually few lines long\\
-usually few lines long\\
-\printead{e3}\\
-\printead{u1}}
-
-\thankstext{t1}{Some comment}
-\thankstext{t2}{First supporter of the project}
-\thankstext{t3}{Second supporter of the project}
-\runauthor{F. Author et al.}
-
-\affiliation{Some University and Another University}
+    \author{\fnms{First} \snm{Author}\thanksref{t2}\ead[label=e1]{first@somewhere.com}},
+    \address{Address of the First Author\\
+             Country\\
+             \printead{e1}}
+    \author{\fnms{Second} \snm{Author}\ead[label=e2]{second@somewhere.com}}
+    \address{Address of the Second Author\\
+             Country\\
+             \printead{e2}}
+    \and
+    \author{\fnms{Third Name} \snm{Author}
+            \ead[label=e3]{third@somewhere.com}%
+            \ead[label=u1,url]{http://www.foo.com}}
+    \address{Address of the Third Author\\
+             Country\\
+             \printead{e3}\\
+             \printead{u1}}
+    \thankstext{t2}{Corresponding author.}
 \end{aug}
+%
+\received{\sday{3} \smonth{1} \syear{2018}}
 
 \begin{abstract}
 The abstract should summarize the contents of the paper.
@@ -68,8 +59,6 @@ This is a sample input file.  Comparing it with the output it
 generates can show you how to produce a simple document of
 your own.
 \end{abstract}
-
-\received{\smonth{1} \sday{1}, \syear{0000}}
 
 %\tableofcontents
 
@@ -169,6 +158,29 @@ Remember that a letter like
        $x$        % $ ... $  and  \( ... \)  are equivalent
 is a formula when it denotes a mathematical symbol, and should
 be treated as one.
+
+\begin{table*}
+\caption{The spherical case ($I_1=0$, $I_2=0$)}\label{sphericcase}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}crrrrc}
+\hline
+\hline
+ Equil. Points & \multicolumn{1}{c}{$x$} & \multicolumn{1}{c}{$y$} & \multicolumn{1}{c}{$z$} & \multicolumn{1}{c}{$C$} &
+S \\
+\hline
+$L_1$ & $-$2.485252241 & 0.000000000 & 0.017100631 & 8.230711648 & U \\
+$L_2$ &    0.000000000 & 0.000000000 & 3.068883732 & 0.000000000 & S \\
+$L_3$ &    0.009869059 & 0.000000000 & 4.756386544 & $-$0.000057922 & U \\
+$L_4$ &    0.210589855 & 0.000000000 & $-$0.007021459 & 9.440510897 & U \\
+$L_5$ &    0.455926604 & 0.000000000 & $-$0.212446624 & 7.586126667 & U \\
+$L_6$ &    0.667031314 & 0.000000000 & 0.529879957 & 3.497660052 & U \\
+$L_7$ &    2.164386674 & 0.000000000 & $-$0.169308438 & 6.866562449 & U \\
+$L_8$ &    0.560414471 & 0.421735658 & $-$0.093667445 & 9.241525367 & U \\
+$L_9$ &    0.560414471 & $-$0.421735658 & $-$0.093667445 & 9.241525367 & U\\
+$L_{10}$ & 1.472523232 & 1.393484549 & $-$0.083801333 & 6.733436505 & U \\
+$L_{11}$ & 1.472523232 & $-$1.393484549 & $-$0.083801333 & 6.733436505 & U
+\\ \hline
+\end{tabular*}
+\end{table*}
 
 
 \section{Notes}
@@ -274,34 +286,9 @@ Obvious.
 \end{proof}
 
 \section{Tables and figures}
-Cross reference to labelled table: As you can see in Table~\ref{sphericcase} on
-page~\pageref{sphericcase} and also in Table~\ref{parset} on page~\pageref{parset}.
+Cross references to labelled tables you can see in Table~\ref{sphericcase} and also in Table~\ref{parset}.
 
 
-\begin{table*}
-\caption{The spherical case ($I_1=0$, $I_2=0$)}
-\label{sphericcase}
-\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}crrrrc}
-\hline
-Equil. \\
-Points & \multicolumn{1}{c}{$x$} & \multicolumn{1}{c}{$y$} & \multicolumn{1}{c}{$z$} & \multicolumn{1}{c}{$C$} &
-S \\
-\hline
-$L_1$ & $-$2.485252241 & 0.000000000 & 0.017100631 & 8.230711648 & U \\
-$L_2$ &    0.000000000 & 0.000000000 & 3.068883732 & 0.000000000 & S \\
-$L_3$ &    0.009869059 & 0.000000000 & 4.756386544 & $-$0.000057922 & U \\
-$L_4$ &    0.210589855 & 0.000000000 & $-$0.007021459 & 9.440510897 & U \\
-$L_5$ &    0.455926604 & 0.000000000 & $-$0.212446624 & 7.586126667 & U \\
-$L_6$ &    0.667031314 & 0.000000000 & 0.529879957 & 3.497660052 & U \\
-$L_7$ &    2.164386674 & 0.000000000 & $-$0.169308438 & 6.866562449 & U \\
-$L_8$ &    0.560414471 & 0.421735658 & $-$0.093667445 & 9.241525367 & U \\
-$L_9$ &    0.560414471 & $-$0.421735658 & $-$0.093667445 & 9.241525367 & U
-\\
-$L_{10}$ & 1.472523232 & 1.393484549 & $-$0.083801333 & 6.733436505 & U \\
-$L_{11}$ & 1.472523232 & $-$1.393484549 & $-$0.083801333 & 6.733436505 & U
-\\ \hline
-\end{tabular*}
-\end{table*}
 
 
 A major
@@ -329,7 +316,7 @@ in steady state continuous culture conditions, and with $\mu$ described by a Mon
 \begin{equation}
     C_{s}  =  K_{M} \frac{\mu/\mu_{x}}{1-\mu/\mu_{x}} \label{cs}
 \end{equation}
-Pirt \& Rhigelato determined $\pi$ for $\mu$ between
+Pirt and Rhigelato determined $\pi$ for $\mu$ between
 $0.023$ and $0.086$ h$^{-1}$.
 They also reported a value $\mu_{x} \approx 0.095$
 h$^{-1}$, so that for their experiments $\mu/\mu_{x}$ is in the range
@@ -337,20 +324,19 @@ of $0.24$ to $0.9$.
 Substituting $K _M$ in Eq. (\ref{cs}) by
 the value $K_{M}=1$ g/L as used by \cite{r1}, one finds
 with the above equation $0.3 < C_{s} < 9$ g/L. This agrees well with
-the work of  \cite{r4}, who reported that penicillin biosynthesis
+the work of \cite{r4}, who reported that penicillin biosynthesis
 repression only occurs at glucose concentrations from $C_{s}=10$ g/L on.
 The conclusion is that the glucose concentrations in the experiments of
-Pirt \& Rhigelato probably were too low for glucose repression to be
-detected. The experimental data published by Ryu \& Hospodka
+Pirt and Rhigelato probably were too low for glucose repression to be
+detected. The experimental data published by Ryu and Hospodka
 are not detailed sufficiently to permit a similar analysis.
 
 \begin{table}
-\centering
-\tablewidth=6.1cm
-\caption{Parameter sets used by Bajpai \& Reu\ss\ }\label{parset}
-\begin{tabular}{lrll}
+\caption{Parameter sets used by Bajpai and Reu\ss are not detailed sufficiently to permit a similar analysis}\label{parset}
+\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}llll}
 \hline
-\multicolumn{2}{l}{Parameter} & {\it Set 1} & {\it Set 2}\\
+\hline
+\multicolumn{2}{@{}l}{Parameter} & {\it Set 1} & {\it Set 2}\\
 \hline
 $\mu_{x}$           & [h$^{-1}$]  & 0.092       & 0.11          \\
 $K_{x}$             & [g/g DM]     & 0.15        & 0.006         \\
@@ -362,10 +348,10 @@ $Y_{p/s}$           & [g/g]        & 0.9         & 1.2           \\
 $k_{h}$             & [h$^{-1}$]  & 0.04        & 0.01          \\
 $m_{s}$             & [g/g DM h]  & 0.014       & 0.029         \\
 \hline
-\end{tabular}
+\end{tabular*}
 \end{table}
 
-Bajpai \& Reu\ss\ decided to disregard the
+Bajpai and Reu\ss\ decided to disregard the
 differences between time constants for the two regulation mechanisms
 (glucose repression or inhibition) because of the
 relatively very long fermentation times, and therefore proposed a Haldane
@@ -376,18 +362,16 @@ initial conditions given by these authors indicate that, when the
 remaining substrate is fed at a constant rate, a considerable and
 unrealistic amount of penicillin is
 produced when the glucose concentration is still very high \cite{r2,r3,r4}
-Simulations with the Bajpai \& Reu\ss\ model correctly predict almost
+Simulations with the Bajpai and Reu\ss\ model correctly predict almost
 no penicillin production in similar conditions.
 
-\begin{figure} % figuur 1
-\vspace{6pc}
-\caption[]{Pathway of the penicillin G biosynthesis.}
-\label{penG}
+\begin{figure}
+\fbox{\parbox[b][1.5cm]{3cm}{\ }}
+%\includegraphics{}
+\caption{Pathway of the penicillin G biosynthesis.}\label{penG}
 \end{figure}
 
-Sample of cross-reference to figure.
-Figure~\ref{penG} shows that is not easy to get something on paper.
-
+Sample of cross-reference to figure. Figure~\ref{penG} shows that is not easy to get something on paper.
 
 
 \section{Headings}
@@ -417,18 +401,18 @@ and
 \end{equation}
 
 Two equation arrays:
-\begin{eqnarray}
-  \frac{dS}{dt} & = & - \sigma X + s_{F} F\\
-  \frac{dX}{dt} & = &   \mu    X\\
-  \frac{dP}{dt} & = &   \pi    X - k_{h} P\\
-  \frac{dV}{dt} & = &   F
-\end{eqnarray}
+\begin{align}
+  \frac{dS}{dt} & =  - \sigma X + s_{F} F\\
+  \frac{dX}{dt} & =    \mu    X\\
+  \frac{dP}{dt} & =    \pi    X - k_{h} P\\
+  \frac{dV}{dt} & =    F
+\end{align}
 and,
-\begin{eqnarray}
- \mu_{\rm substr} & = & \mu_{x} \frac{C_{s}}{K_{x}C_{x}+C_{s}}  \\
- \mu              & = & \mu_{\rm substr} - Y_{x/s}(1-H(C_{s}))(m_{s}+\pi /Y_{p/s}) \\
- \sigma           & = & \mu_{\rm substr}/Y_{x/s}+ H(C_{s}) (m_{s}+ \pi /Y_{p/s})
-\end{eqnarray}
+\begin{align}
+ \mu_{\rm substr} & =  \mu_{x} \frac{C_{s}}{K_{x}C_{x}+C_{s}}  \\
+ \mu              & =  \mu_{\rm substr} - Y_{x/s}(1-H(C_{s}))(m_{s}+\pi /Y_{p/s}) \\
+ \sigma           & =  \mu_{\rm substr}/Y_{x/s}+ H(C_{s}) (m_{s}+ \pi /Y_{p/s})
+\end{align}
 
 
 \appendix
@@ -463,7 +447,7 @@ and denote it by
 \mathcal{P}=\bigl(j_{k,1},j_{k,2},\dots,j_{k,m(k)}\bigr). \label{path}
 \end{equation}
 
-Sample of cross-reference to the formula \ref{path} in Appendix \ref{app}.
+Sample of cross-reference to the formula \ref{path} in Appendix~\ref{app}.
 
 \section*{Acknowledgements}
 And this is an acknowledgements section with a heading that was produced by the
@@ -484,7 +468,7 @@ Wiley, New York.
 Addison--Wesley, Reading, MA.
 
 \bibitem{r3}
-\textsc{Ethier, S. N.} and \textsc{Kurtz, T. G.} (1985).
+\textsc{Ethier, S.~N.} and \textsc{Kurtz, T. G.} (1985).
 \textit{Markov Processes: Characterization and Convergence}.
 Wiley, New York.
 \MR{838085}
