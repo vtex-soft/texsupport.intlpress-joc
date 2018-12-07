@@ -1,25 +1,24 @@
-%% it's a sample file!
-%% please use corressponding template
+%% It's a sample file!
+%% Please use corressponding template
 
 \documentclass[joc]{ipart}
 
-\RequirePackage{amsthm,amsmath}
-\RequirePackage[numbers,square]{natbib}
+\RequirePackage{amsthm,amsmath,amssymb}
 \RequirePackage{hyperref}
-
-% settings
-\pubyear{2018}
-\volume{0}
-\issue{0}
-\firstpage{1}
-\lastpage{4}
-\arxiv{math/0000.0000}
 
 \startlocaldefs
 %\numberwithin{equation}{section}
 \theoremstyle{plain}
 \newtheorem{thm}{Theorem}[section]
 \endlocaldefs
+
+% Settings
+\pubyear{2018}
+\volume{0}
+\issue{0}
+\firstpage{1}
+\lastpage{4}
+\arxiv{math/0000.0000}
 
 \begin{document}
 
@@ -37,7 +36,7 @@
              Country\\
              \printead{e2}}
     \and
-    \author{\fnms{Third Name} \snm{Author}
+    \author{\fnms{Third} \snm{Author}
             \ead[label=e3]{third@somewhere.com}%
             \ead[label=u1,url]{http://www.foo.com}}
     \address{Address of the Third Author\\
@@ -61,7 +60,6 @@ your own.
 \end{abstract}
 
 %\tableofcontents
-
 \end{frontmatter}
 
 \section{Ordinary text}
@@ -88,8 +86,7 @@ your own input file.
 Because printing is different from typewriting, there are a
 number of things that you have to do differently when preparing
 an input file than if you were just typing the document directly.
-Quotation marks like
-       ``this''
+Quotation marks like       ``this''
 have to be handled specially, as do quotes within quotes:
        ``\,`this'                  % \, separates the double and single quote.
     is what I just
@@ -124,7 +121,6 @@ requires a special  command.
 \TeX\ interprets some common characters as commands, so you must type
 special commands to generate them.  These characters include the
 following:
-%       \$
        \& \% \# \{ and~\}.
 
 In printing, text is emphasized by using an
@@ -185,7 +181,7 @@ $L_{11}$ & 1.472523232 & $-$1.393484549 & $-$0.083801333 & 6.733436505 & U
 
 \section{Notes}
 Footnotes\footnote{This is an example of a footnote.}
-pose no problem\footnote{And another one}.
+pose no problem\footnote{And another one.}.
 
 \section{Displayed text}
 
@@ -268,8 +264,8 @@ You can even display poetry.
 
 Mathematical formulas may also be displayed.  A displayed formula is
 one-line long; multiline formulas require special formatting
-instructions.
-   \[  x' + y^{2} = z_{i}^{2}\]
+instructions
+   \[  x' + y^{2} = z_{i}^{2}.\]
 Don't start a paragraph with a displayed equation, nor make
 one a paragraph by itself.
 
@@ -286,10 +282,8 @@ Obvious.
 \end{proof}
 
 \section{Tables and figures}
-Cross references to labelled tables you can see in Table~\ref{sphericcase} and also in Table~\ref{parset}.
-
-
-
+Cross references to labelled tables you can see in Table~\ref{sphericcase}
+and also in Table~\ref{parset}.
 
 A major
 point of difference lies in the value of the specific production rate $\pi$ for
@@ -371,7 +365,8 @@ no penicillin production in similar conditions.
 \caption{Pathway of the penicillin G biosynthesis.}\label{penG}
 \end{figure}
 
-Sample of cross-reference to figure. Figure~\ref{penG} shows that is not easy to get something on paper.
+Sample of cross-reference to figure.
+Figure~\ref{penG} shows that is not easy to get something on paper.
 
 
 \section{Headings}
@@ -397,7 +392,7 @@ Two equations:
 \end{equation}
 and
 \begin{equation}
-    G = \frac{P_{\rm opt} - P_{\rm ref}}{P_{\rm ref}} \mbox{\ }100 \mbox{\ }(\%)
+    G = \frac{P_{\rm opt} - P_{\rm ref}}{P_{\rm ref}} \mbox{\ }100 \mbox{\ }(\%).
 \end{equation}
 
 Two equation arrays:
@@ -407,7 +402,7 @@ Two equation arrays:
   \frac{dP}{dt} & =    \pi    X - k_{h} P\\
   \frac{dV}{dt} & =    F
 \end{align}
-and,
+and
 \begin{align}
  \mu_{\rm substr} & =  \mu_{x} \frac{C_{s}}{K_{x}C_{x}+C_{s}}  \\
  \mu              & =  \mu_{\rm substr} - Y_{x/s}(1-H(C_{s}))(m_{s}+\pi /Y_{p/s}) \\
