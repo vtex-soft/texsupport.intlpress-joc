@@ -12,7 +12,7 @@
 ## About
 
 Author support service provides LaTeX style files and `*.tex` file templates designed for International Press journal
-[Journal of Combinatorics (JOC)](http://www.intlpress.com/JOC/) articles.
+[Journal of Combinatorics (JOC)](http://www.intlpress.com/JOC) articles.
 
 ## Package content
 
